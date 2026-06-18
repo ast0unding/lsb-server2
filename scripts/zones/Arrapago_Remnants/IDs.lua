@@ -17,6 +17,7 @@ zones[xi.zone.ARRAPAGO_REMNANTS] =
         ITEMS_OBTAINED                = 6403, -- You obtain <number> <item>!
         CARRIED_OVER_POINTS           = 7005, -- You have carried over <number> login point[/s].
         LOGIN_CAMPAIGN_UNDERWAY       = 7006, -- The [/January/February/March/April/May/June/July/August/September/October/November/December] <number> Login Campaign is currently underway!
+        -- TEMP_ITEM                     = 7062, -- Obtained temporary item: <item>!
         LOGIN_NUMBER                  = 7007, -- In celebration of your most recent login (login no. <number>), we have provided you with <number> points! You currently have a total of <number> points.
         MEMBERS_LEVELS_ARE_RESTRICTED = 7027, -- Your party is unable to participate because certain members' levels are restricted.
         TEMP_ITEM                     = 7065, -- Obtained temporary item: <item>!
