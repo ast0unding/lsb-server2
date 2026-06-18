@@ -1128,6 +1128,9 @@ xi.mod =
 
     KNOCKBACK_REDUCTION = 1172, -- Reduces distance knocked back
 
+    -- Era Custom:
+    ADDS_SPELL = 1220,
+
     -- IF YOU ADD ANY NEW MODIFIER HERE, ADD IT IN src/map/modifier.h ASWELL!
 
     -- The spares take care of finding the next ID to use so long as we don't forget to list IDs that have been freed up by refactoring.
