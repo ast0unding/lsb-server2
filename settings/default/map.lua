@@ -52,7 +52,7 @@ xi.settings.map =
     AH_BASE_FEE_STACKS = 4,
     AH_TAX_RATE_SINGLE = 1.0,
     AH_TAX_RATE_STACKS = 0.5,
-    AH_MAX_FEE         = 10000,
+    AH_MAX_FEE         = 40000,
 
     -- Max open listings per player, 0 = no limit. (Default 7)
     -- Note = Settings over 7 may need client-side plugin to work under all circumstances.
@@ -66,8 +66,12 @@ xi.settings.map =
     ENMITY_CAP = 30000,
 
     -- Misc EXP related settings
-    EXP_RATE                = 1.0,
-    EXP_LOSS_RATE           = 1.0,
+    EXP_RATE                = 4.0,
+    EXP_LOSS_RATE           = 3.0,
+
+    -- ERA Custom: Mentor EXP Settings
+    MENTOR_EXP_RATE         = 1.0,
+    MENTOR_EXP_LOSS_RATE    = 1.0,
 
     -- Capacity Point Settings
     CAPACITY_RATE = 1.0,
@@ -107,7 +111,7 @@ xi.settings.map =
     ALL_JOBS_WIDESCAN = true,
 
     -- Base player movement speed
-    BASE_SPEED = 50,
+    BASE_SPEED = 60,
 
     -- Player movement speed limit
     SPEED_LIMIT = 80,
@@ -149,7 +153,7 @@ xi.settings.map =
     CRAFT_HQ_CHANCE_MULTIPLIER = 1.0,
 
     -- Enable/disable all fishing, including quests. ENABLE AT YOUR OWN RISK.
-    FISHING_ENABLE = false,
+    FISHING_ENABLE = true,
 
     -- Sets the minimum level a character must be to fish.
     FISHING_MIN_LEVEL = 1,
@@ -290,7 +294,7 @@ xi.settings.map =
     HEALING_TICK_DELAY = 10,
 
     -- Enable/disable keeping jug pets through zoning
-    KEEP_JUGPET_THROUGH_ZONING = false,
+    KEEP_JUGPET_THROUGH_ZONING = true,
 
     -- Despawn jug pets that have a minimum level below level sync or zone level restriction.
     -- Such as despawning Courier Carrie in a level 20 cap when their minimum level to summon is 23.
