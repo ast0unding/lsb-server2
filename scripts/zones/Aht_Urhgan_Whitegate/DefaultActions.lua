@@ -3,7 +3,7 @@ local ID = zones[xi.zone.AHT_URHGAN_WHITEGATE]
 return {
     ['_1e7']               = { messageSpecial = ID.text.GATE_IS_FIRMLY_CLOSED },
     ['Ahaadah']            = { event = 870 },
-    ['Amajal']             = { event = 675 },
+    -- ['Amajal']             = { event = 675 },
     ['Arzizah']            = { event = 246 },
     ['Balakaf']            = { event = 515 },
     ['Bujahwa']            = { event = 683 },

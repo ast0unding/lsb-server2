@@ -57,6 +57,7 @@ zones[xi.zone.BIBIKI_BAY] =
         PEERIFOOL  = GetFirstID('Peerifool'),
         SERRA      = GetFirstID('Serra'),
         SPLACKNUCK = GetFirstID('Splacknuck'),
+        SHEN       = GetFirstID('Shen'),
     },
     npc =
     {
