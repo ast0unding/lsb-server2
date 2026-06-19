@@ -100,7 +100,7 @@ zones[xi.zone.LEBROS_CAVERN] =
             {
             },
         },
-        [xi.assault.mission.OPERATION__BLACK_PEARL] = -- TODO
+        [xi.assault.mission.OPERATION_BLACK_PEARL] = -- TODO
         {
             MOBS_START =
             {
