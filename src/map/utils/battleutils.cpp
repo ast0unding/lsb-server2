@@ -1993,6 +1993,7 @@ auto TakePhysicalDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, PHYS
     int32          baseDamage = damage;
     xi::AttackType attackType = xi::AttackType::Physical;
     xi::DamageType damageType = xi::DamageType::None;
+
     if (PAttacker->StatusEffectContainer->HasStatusEffect(xi::StatusEffect::FormlessStrikes) && !isCounter)
     {
         attackType        = xi::AttackType::Special;

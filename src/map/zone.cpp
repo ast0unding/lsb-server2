@@ -809,6 +809,24 @@ void CZone::IncreaseZoneCounter(CCharEntity* PChar)
     CharZoneIn(PChar);
 }
 
+void CZone::increaseStayAwakeCounter()
+{
+    m_stayAwakeCounter++;
+
+    if (!zoneTimerToken_.has_value())
+    {
+        createZoneTimers();
+    }
+}
+
+void CZone::decreaseStayAwakeCounter()
+{
+    if (m_stayAwakeCounter > 0)
+    {
+        m_stayAwakeCounter--;
+    }
+}
+
 void CZone::SpawnMOBs(CCharEntity* PChar)
 {
     m_zoneEntities->SpawnMOBs(PChar);
@@ -916,6 +934,12 @@ auto CZone::ZoneServer(timer::time_point tick) -> Task<void>
     if (m_BattlefieldHandler != nullptr)
     {
         m_BattlefieldHandler->HandleBattlefields(tick);
+    }
+
+    if (zoneTimerToken_.has_value() && m_stayAwakeCounter == 0 && m_zoneEntities->CharListEmpty() && m_timeZoneEmpty + 5s < timer::now() && CheckMobsPathedBack())
+    {
+        zoneTimerToken_.reset();
+        zoneTimerTriggerAreasToken_.reset();
     }
 
     co_return;

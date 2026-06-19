@@ -24,6 +24,7 @@
 #include "entities/char_entity.h"
 #include "items/item_weapon.h"
 #include "latent_effect.h"
+#include "packets/s2c/0x0aa_magic_data.h"
 #include "packets/s2c/0x0ac_command_data.h"
 #include "status_effect_container.h"
 #include "utils/charutils.h"
@@ -147,6 +148,10 @@ bool CLatentEffect::Activate()
                 item->addModifier(GetModValue(), GetModPower());
                 charutils::BuildingCharWeaponSkills(PChar);
                 PChar->pushPacket<GP_SERV_COMMAND_COMMAND_DATA>(PChar);
+                if (GetModValue() == Mod::ADDS_SPELL)
+                {
+                    PChar->pushPacket<GP_SERV_COMMAND_MAGIC_DATA>(PChar);
+                }
                 m_PItem = item;
             }
         }
@@ -181,6 +186,10 @@ bool CLatentEffect::Deactivate()
                 CCharEntity* PChar = static_cast<CCharEntity*>(m_POwner);
                 charutils::BuildingCharWeaponSkills(PChar);
                 PChar->pushPacket<GP_SERV_COMMAND_COMMAND_DATA>(PChar);
+                if (GetModValue() == Mod::ADDS_SPELL)
+                {
+                    PChar->pushPacket<GP_SERV_COMMAND_MAGIC_DATA>(PChar);
+                }
             }
         }
         // Remove other modifiers from player
