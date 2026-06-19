@@ -643,6 +643,8 @@ public:
 
     uint32 m_stayAwakeCounter{ 0 };
 
+    uint32 m_stayAwakeCounter{ 0 };
+
     auto navMesh() const -> INavMesh*;
     auto xiMesh() const -> IXiMesh*;
 
