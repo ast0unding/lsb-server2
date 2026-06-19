@@ -1165,12 +1165,30 @@ enum class Mod
 
     KNOCKBACK_REDUCTION = 1172, // Reduces distance knocked +? gear. See Knockback enum.
 
+    // Circle Abilities Damage Bonus and Reduced Damage Taken
+    WARDING_CIRCLE_DMG_BONUS = 1202,
+    ANCIENT_CIRCLE_DMG_BONUS = 1203,
+    HOLY_CIRCLE_DMG_BONUS    = 1204,
+    ARCANE_CIRCLE_DMG_BONUS  = 1205,
+
+    // Killer Instinct Damage Bonus and Reduced Damage Taken
+    VERMIN_KILLER_DMG_BONUS   = 1206,
+    BIRD_KILLER_DMG_BONUS     = 1207,
+    AMORPH_KILLER_DMG_BONUS   = 1208,
+    LIZARD_KILLER_DMG_BONUS   = 1209,
+    AQUAN_KILLER_DMG_BONUS    = 1210,
+    PLANTOID_KILLER_DMG_BONUS = 1211,
+    BEAST_KILLER_DMG_BONUS    = 1212,
+
+    // Era custom mod
+    ADDS_SPELL = 1220,
+
     // IF YOU ADD ANY NEW MODIFIER HERE, ADD IT IN scripts/enum/mod.lua ASWELL!
 
     // The spares take care of finding the next ID to use so long as we don't forget to list IDs that have been freed up by refactoring.
     // 570 through 825 used by WS DMG mods these are not spares.
     //
-    // SPARE IDs: 1210 and onward
+    // SPARE IDs: 1210 (ERA 1221) and onward
 };
 
 // temporary workaround for using enum class as unordered_map key until compilers support it

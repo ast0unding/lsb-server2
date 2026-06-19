@@ -1,21 +1,15 @@
 -----------------------------------
--- Area: RuAun Gardens
---  NPC: Goblin Footprint
--- !pos  15.68 -54.007 -588.689 130
+-- Universal Goblin Footprint NPC
+-----------------------------------
+require('modules/custom/lua/gobhook')
 -----------------------------------
 ---@type TNpcEntity
 local entity = {}
 
-entity.onTrade = function(player, npc, trade)
-    xi.goblinfootprint.rewatch(player)
-end
-
 entity.onTrigger = function(player, npc)
-    xi.goblinfootprint.rewatch(player, true)
-end
-
-entity.onEventFinish = function(player, csid, option, npc)
-    xi.goblinfootprint.startEvent(player, csid, option, npc)
+    if player:getVar('gobquest') == 1 then
+        xi.mafia.gobhook(player, npc)
+    end
 end
 
 return entity
