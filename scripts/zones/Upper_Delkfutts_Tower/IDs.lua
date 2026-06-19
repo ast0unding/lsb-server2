@@ -38,6 +38,7 @@ zones[xi.zone.UPPER_DELKFUTTS_TOWER] =
         ENKELADOS = GetTableOfIDs('Enkelados'),
         IXTAB     = GetTableOfIDs('Ixtab'),
         PALLAS    = GetFirstID('Pallas'),
+        MIMAS     = GetFirstID('Mimas'),
     },
     npc =
     {

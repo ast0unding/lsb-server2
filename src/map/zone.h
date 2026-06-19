@@ -290,6 +290,9 @@ public:
     virtual void DecreaseZoneCounter(CCharEntity* PChar); // Remove a character from the zone
     virtual void IncreaseZoneCounter(CCharEntity* PChar); // Add a character to the zone
 
+    void increaseStayAwakeCounter();
+    void decreaseStayAwakeCounter();
+
     virtual void InsertNPC(CBaseEntity* PNpc);
     virtual void InsertMOB(CBaseEntity* PMob);
     virtual void InsertPET(CBaseEntity* PPet);
@@ -336,6 +339,8 @@ public:
     auto nominateManager() const -> NominateManager&;
     auto campaignHandler() const -> CCampaignHandler*;
     auto battlefieldHandler() const -> CBattlefieldHandler*;
+
+    uint32 m_stayAwakeCounter{ 0 };
 
     auto navMesh() const -> NavMesh*;
     auto xiMesh() const -> XiMesh*;
