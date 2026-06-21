@@ -51,6 +51,31 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
                 mobs_end   = 17088573,
             },
         },
+        [2] = -- 2nd Floor
+        {
+            [1] = -- NE Path
+            {
+                mobs_start = 17088574,
+                mobs_end   = 17088593,
+            },
+            [2] = -- NW Path
+            {
+                deadpan    = GetFirstID('Deadpan_Devilet'),
+                dekka      = GetFirstID('Dekka'),
+                gakke      = GetFirstID('Gakke'),
+            },
+            [3] = -- SE Path
+            {
+                mobs_start = 17088597,
+                mobs_end   = 17088616,
+                powderkeg  = GetFirstID('Powderkeg_Yanadahn'),
+            },
+            [4] = -- NE Path
+            {
+                mobs_start = 17088618,
+                mobs_end   = 17088637,
+            },
+        },
     },
     npc =
     {
@@ -75,6 +100,20 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
                 DOOR3         = GetFirstID('_242'), -- E Door
             },
         },
+        [2] = -- 2nd Floor
+        {
+            [1] =
+            {
+                SOCKET = 17089352,
+            },
+            [3] =
+            {
+                -- DOOR1 =
+                -- DOOR2 =
+                -- DOOR3 =
+                DOOR4 = GetFirstID('_24k'), -- SE Door
+            }
+        }
     },
     drops =
     {
