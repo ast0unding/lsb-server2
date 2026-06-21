@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: Silver Sea Remnants
---  Mob: Ashu Talif Crew
+-- Instance: Silver Sea Remnants
+-- Mob: Ashu Talif Crew
 --
 -- Central room mobs (mob[1][3]) aggro with/without sneak
 -- but will not attack until damaged (hpemde behavior)
@@ -77,6 +77,7 @@ entity.onMobDeath = function(mob, player, optParams)
     local instance   = mob:getInstance()
     local prog       = instance:getProgress()
     local hammerblow = ID.mob[1][2].hammerblow
+    local powderkeg  = ID.mob[2][3].powderkeg
     local cells      = ID.drops[3].CELLS
 
     -- Floor 1 - E Path
@@ -124,13 +125,33 @@ entity.onMobDeath = function(mob, player, optParams)
         addRandomDrops(player, mob, cells, 0, 45)
         -- xi.salvage.spawnTempChest(mob, {})
 
-    -- Floor 2 (placeholder until floor 2 mob IDs are in IDs.lua)
-    -- elseif
-    --     mobID >= ID.mob[2][1].mobs_start and
-    --     mobID <= ID.mob[2][1].mobs_end
-    -- then
-    --     addRandomDrops(player, mob, cells, 3, 45)
-    --     xi.salvage.spawnTempChest(mob, {})
+    -- Floor 2 NE Path
+    elseif
+        mobID >= ID.mob[2][1].mobs_start and
+        mobID <= ID.mob[2][1].mobs_end
+    then
+        addRandomDrops(player, mob, cells, 3, 45)
+        -- xi.salvage.spawnTempChest(mob, {})
+
+    -- Floor 2 SE Path
+    elseif
+        mobID >= ID.mob[2][3].mobs_start and
+        mobID <= ID.mob[2][3].mobs_end
+    then
+        if mobID >= (powderkeg - 16) and mobID < powderkeg then -- 16 Ashu Talif
+            addRandomDrops(player, mob, cells, 3, 45)
+            instance:setProgress(prog + 1)
+        else
+            addRandomDrops(player, mob, cells, 3, 45)
+        end
+
+    -- Floor 2 SW Path
+    elseif
+        mobID >= ID.mob[2][4].mobs_start and
+        mobID <= ID.mob[2][4].mobs_end
+    then
+        addRandomDrops(player, mob, cells, 3, 45)
+        -- xi.salvage.spawnTempChest(mob, {})
     end
 end
 

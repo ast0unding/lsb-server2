@@ -1239,6 +1239,7 @@ INSERT INTO `instance_entities` VALUES (7400,17080990);
 INSERT INTO `instance_entities` VALUES (7400,17080991);
 INSERT INTO `instance_entities` VALUES (7400,17080992);
 INSERT INTO `instance_entities` VALUES (7400,17080993);
+INSERT INTO `instance_entities` VALUES (7400,17080994);
 
 -- ------------------------------------------------------------
 -- Bhaflau Remnants (Zone 75)

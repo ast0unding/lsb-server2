@@ -8,28 +8,27 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
     text =
     {
         ITEM_CANNOT_BE_OBTAINED       = 6386, -- You cannot obtain the <item>. Come back after sorting your inventory.
+        FULL_INVENTORY_AFTER_TRADE    = 6388, -- You cannot obtain the <item>. Try trading again after sorting your inventory.
         ITEM_OBTAINED                 = 6394, -- Obtained: <item>.
         GIL_OBTAINED                  = 6395, -- Obtained <number> gil.
         KEYITEM_OBTAINED              = 6397, -- Obtained key item: <keyitem>.
+        KEYITEM_LOST                  = 6398, -- Lost key item: <keyitem>.        
         CARRIED_OVER_POINTS           = 7005, -- You have carried over <number> login point[/s].
         LOGIN_CAMPAIGN_UNDERWAY       = 7006, -- The [/January/February/March/April/May/June/July/August/September/October/November/December] <number> Login Campaign is currently underway!
         LOGIN_NUMBER                  = 7007, -- In celebration of your most recent login (login no. <number>), we have provided you with <number> points! You currently have a total of <number> points.
         MEMBERS_LEVELS_ARE_RESTRICTED = 7027, -- Your party is unable to participate because certain members' levels are restricted.
+        TEMP_ITEM                     = 7065, -- Obtained temporary item: <item>!
         CELL_OFFSET                   = 7231, -- Main Weapon/Sub-Weapon restriction removed.
-
-        -- Check all these IDs
-        -- FULL_INVENTORY_AFTER_TRADE    = 6389, -- You cannot obtain the <item>. Try trading again after sorting your inventory.
-        -- KEYITEM_LOST                  = 6397, -- Lost key item: <keyitem>.
-        -- TEMP_ITEM                     = 7064, -- Obtained temporary item: <item>!SALVAGE_START                 = 7253, -- You feel an incredible pressure bearing down on you. This area appears to be blanketed in some sort of intense psionic field...
-        -- TIME_TO_COMPLETE              = 7425, -- You have <number> [minute/minutes] (Earth time) to complete this mission.
-        -- MISSION_FAILED                = 7426, -- The mission has failed. Leaving area.
-        -- TIME_REMAINING_MINUTES        = 7430, -- Time remaining: <number> [minute/minutes] (Earth time).
-        -- TIME_REMAINING_SECONDS        = 7431, -- Time remaining: <number> [second/seconds] (Earth time).
-        -- PARTY_FALLEN                  = 7433, -- All party members have fallen in battle. Mission failure in <number> [minute/minutes].
-        -- DOOR_IS_SEALED                = 7444, -- The door is sealed...
-        -- DOOR_IS_SEALED_MYSTERIOUS     = 7446, -- The door is sealed by some mysterious force...
-        -- SOCKET_TRIGGER                = 7448, -- You hear a ragged sighing from beneath the floor...
-        -- SLOT_TRIGGER                  = 7449, -- You hear a scuttering sound from beneath the floor...
+        SALVAGE_START                 = 7254, -- You feel an incredible pressure bearing down on you. This area appears to be blanketed in some sort of intense psionic field...
+        TIME_TO_COMPLETE              = 7426, -- You have <number> [minute/minutes] (Earth time) to complete this mission.
+        MISSION_FAILED                = 7427, -- The mission has failed. Leaving area.
+        TIME_REMAINING_MINUTES        = 7431, -- Time remaining: <number> [minute/minutes] (Earth time).
+        TIME_REMAINING_SECONDS        = 7432, -- Time remaining: <number> [second/seconds] (Earth time).
+        PARTY_FALLEN                  = 7434, -- All party members have fallen in battle. Mission failure in <number> [minute/minutes].
+        DOOR_IS_SEALED                = 7445, -- The door is sealed...
+        DOOR_IS_SEALED_MYSTERIOUS     = 7447, -- The door is sealed by some mysterious force...
+        SOCKET_TRIGGER                = 7449, -- You hear a ragged sighing from beneath the floor...
+        SLOT_TRIGGER                  = 7450, -- You hear a scuttering sound from beneath the floor...
     },
     mob =
     {
@@ -50,6 +49,31 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
             {
                 mobs_start = 17088558,
                 mobs_end   = 17088573,
+            },
+        },
+        [2] = -- 2nd Floor
+        {
+            [1] = -- NE Path
+            {
+                mobs_start = 17088574,
+                mobs_end   = 17088593,
+            },
+            [2] = -- NW Path
+            {
+                deadpan    = GetFirstID('Deadpan_Devilet'),
+                dekka      = GetFirstID('Dekka'),
+                gakke      = GetFirstID('Gakke'),
+            },
+            [3] = -- SE Path
+            {
+                mobs_start = 17088597,
+                mobs_end   = 17088616,
+                powderkeg  = GetFirstID('Powderkeg_Yanadahn'),
+            },
+            [4] = -- NE Path
+            {
+                mobs_start = 17088618,
+                mobs_end   = 17088637,
             },
         },
     },
@@ -76,6 +100,20 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
                 DOOR3         = GetFirstID('_242'), -- E Door
             },
         },
+        [2] = -- 2nd Floor
+        {
+            [1] =
+            {
+                SOCKET = 17089352,
+            },
+            [3] =
+            {
+                -- DOOR1 =
+                -- DOOR2 =
+                -- DOOR3 =
+                DOOR4 = GetFirstID('_24k'), -- SE Door
+            }
+        }
     },
     drops =
     {
