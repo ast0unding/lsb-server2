@@ -1,4 +1,4 @@
-/*
+﻿/*
 ===========================================================================
 
   Copyright (c) 2010-2015 Darkstar Dev Teams
@@ -28,7 +28,7 @@
 #include "mob_spell_list.h"
 #include "spell.h"
 
-#include "entities/charentity.h"
+#include "entities/char_entity.h"
 #include "items/item_equipment.h"
 #include "utils/battleutils.h"
 
