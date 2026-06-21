@@ -17,11 +17,11 @@ zones[xi.zone.ARRAPAGO_REMNANTS] =
         ITEMS_OBTAINED                = 6403, -- You obtain <number> <item>!
         CARRIED_OVER_POINTS           = 7005, -- You have carried over <number> login point[/s].
         LOGIN_CAMPAIGN_UNDERWAY       = 7006, -- The [/January/February/March/April/May/June/July/August/September/October/November/December] <number> Login Campaign is currently underway!
-        -- TEMP_ITEM                     = 7062, -- Obtained temporary item: <item>!
         LOGIN_NUMBER                  = 7007, -- In celebration of your most recent login (login no. <number>), we have provided you with <number> points! You currently have a total of <number> points.
         MEMBERS_LEVELS_ARE_RESTRICTED = 7027, -- Your party is unable to participate because certain members' levels are restricted.
+        TEMP_ITEM                     = 7065, -- Obtained temporary item: <item>!
         CELL_OFFSET                   = 7231, -- Main Weapon/Sub-Weapon restriction removed.
-        -- HAVE_TEMP_ITEM                = 7250, -- You already have that temporary item.me).
+        HAVE_TEMP_ITEM                = 7253, -- You already have that temporary item <item>.
         SALVAGE_START                 = 7254, -- You feel an incredible pressure bearing down on you. This area appears to be blanketed in some sort of intense psionic field...
         TIME_TO_COMPLETE              = 7461, -- You have <number> [minute/minutes] (Earth time) to complete this mission.
         MISSION_FAILED                = 7462, -- The mission has failed. Leaving area.
@@ -30,8 +30,8 @@ zones[xi.zone.ARRAPAGO_REMNANTS] =
         PARTY_FALLEN                  = 7469, -- All party members have fallen in battle. Mission failure in <number> [minute/minutes].
         DOOR_IS_SEALED                = 7480, -- The door is sealed...
         DOOR_IS_SEALED_MYSTERIOUS     = 7483, -- The door is sealed by some mysterious force...
-        -- SOCKET_TRIGGER                = 7483, -- You hear a ragged sighing from beneath the floor...
-        -- SLOT_TRIGGER                  = 7484, -- You hear a scuttering sound from beneath the floor...
+        SOCKET_TRIGGER                = 7484, -- You hear a ragged sighing from beneath the floor...
+        SLOT_TRIGGER                  = 7485, -- You hear a scuttering sound from beneath the floor...
     },
     mob =
     {
