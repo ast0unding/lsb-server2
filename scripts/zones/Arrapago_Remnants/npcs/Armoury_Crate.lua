@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: Arrapago Remnants
+-- Instance: Arrapago Remnants
 --  NPC: Armoury Crate (Arrapago)
 -----------------------------------
 ---@type TNpcEntity
