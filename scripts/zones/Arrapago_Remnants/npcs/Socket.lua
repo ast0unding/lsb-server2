@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: Arrapago Remnants
+-- Instance: Arrapago Remnants
 --  NPC: Socket
 -- Trade Salvage Cells to pop Vile Wahzil
 -- Wahzil drops 2x the Cells traded

@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: Arrapago Remnants
+-- Instance: Arrapago Remnants
 --  NPC: Slot
 -- Trade Bhaflau card to pop NM
 -----------------------------------

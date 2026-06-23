@@ -1,3 +1,6 @@
+-----------------------------------
+-- Instance: Arrapago Remnants
+-----------------------------------
 local ID = zones[xi.zone.ARRAPAGO_REMNANTS]
 -----------------------------------
 ---@type TNpcEntity

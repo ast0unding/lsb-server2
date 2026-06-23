@@ -63,6 +63,13 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
                 deadpan    = GetFirstID('Deadpan_Devilet'),
                 dekka      = GetFirstID('Dekka'),
                 gakke      = GetFirstID('Gakke'),
+                roam_path  =
+                {
+                    286, 0, 513,
+                    286, 0, 566,
+                    233, 0, 566,
+                    232, 0, 513,
+                },
             },
             [3] = -- SE Path
             {
@@ -108,10 +115,8 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
             },
             [3] =
             {
-                -- DOOR1 =
-                -- DOOR2 =
-                -- DOOR3 =
-                DOOR4 = GetFirstID('_24k'), -- SE Door
+                DOOR1 = GetFirstID('_24k'), -- SE Door
+                DOOR2 = GetFirstID('_24f'), -- NW Door
             }
         }
     },

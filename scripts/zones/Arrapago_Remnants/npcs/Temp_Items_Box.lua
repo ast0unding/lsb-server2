@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: Arrapago Remnants
+-- Instance: Arrapago Remnants
 -- NPC: Temp Items Box
 -----------------------------------
 ---@type TNpcEntity
