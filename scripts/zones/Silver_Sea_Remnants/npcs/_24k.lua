@@ -1,6 +1,5 @@
 -----------------------------------
 -- Instance: Silver Sea Remnants
--- NPC: _24k
 -----------------------------------
 local ID = zones[xi.zone.SILVER_SEA_REMNANTS]
 -----------------------------------
@@ -8,7 +7,7 @@ local ID = zones[xi.zone.SILVER_SEA_REMNANTS]
 local entity = {}
 
 entity.onTrigger = function(player, npc)
-    if npc:getLocalVar("open") == 4 then
+    if npc:getLocalVar('open') == 4 then
         player:startEvent(300)
     else
         player:messageSpecial(ID.text.DOOR_IS_SEALED)

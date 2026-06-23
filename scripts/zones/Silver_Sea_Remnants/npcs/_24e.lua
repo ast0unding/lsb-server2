@@ -1,6 +1,5 @@
 -----------------------------------
 -- Instance: Silver Sea Remnants
--- NPC: _24e
 -----------------------------------
 local ID = zones[xi.zone.SILVER_SEA_REMNANTS]
 -----------------------------------

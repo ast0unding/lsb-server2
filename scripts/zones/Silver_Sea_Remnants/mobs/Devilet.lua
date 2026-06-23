@@ -18,11 +18,15 @@ entity.onMobDeath = function(mob, player, isKiller)
     if isKiller then
         -- Floor 2 SE Path
         if stage == 2 then
-            if ID.npc[2] and ID.npc[2][3] and ID.npc[2][3].DOOR4 then
-                local door4 = GetNPCByID(ID.npc[2][3].DOOR4, instance)
-                if door4 then
-                    local openCount = door4:getLocalVar("open")
-                    door4:setLocalVar("open", openCount + 1)
+            if
+                ID.npc[2] and
+                ID.npc[2][3] and
+                ID.npc[2][3].DOOR1
+            then
+                local door = GetNPCByID(ID.npc[2][3].DOOR1, instance)
+                if door then
+                    local openCount = door:getLocalVar('open')
+                    door:setLocalVar('open', openCount + 1)
                 end
             end
 
@@ -45,7 +49,6 @@ entity.onMobDeath = function(mob, player, isKiller)
                 player:addTreasure(cell2, mob)
             end
 
-            -- Count towards Powderkeg Yanadahn
             local prog = instance:getProgress()
             instance:setProgress(prog + 1)
         end
