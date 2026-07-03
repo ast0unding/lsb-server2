@@ -7,11 +7,11 @@ local ID = zones[xi.zone.SILVER_SEA_REMNANTS]
 local entity = {}
 
 entity.onTrigger = function(player, npc)
-    player:startEvent(300)
+    player:startEvent(xi.salvage.csid.DOOR_OPEN)
 end
 
 entity.onEventFinish = function(player, csid, option, door)
-    if csid == 300 and option == 1 then
+    if csid == xi.salvage.csid.DOOR_OPEN and option == 1 then
         local instance = door:getInstance()
         if not instance then
             return

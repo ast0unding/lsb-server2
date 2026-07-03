@@ -6,6 +6,8 @@ xi.salvage = xi.salvage or {}
 
 xi.salvage.csid =
 {
+    DOOR_OPEN = 300,
+
     AR =
     {
         FLOOR_1_TO_2_START = 200,

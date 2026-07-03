@@ -3966,8 +3966,8 @@ INSERT INTO `mob_groups` VALUES (7,263,76,'Ashu_Talif_Crew_rng',0,128,0,0,0,0,NU
 INSERT INTO `mob_groups` VALUES (8,5431,76,'Ashu_Talif_Crew_rdm',0,128,0,0,9999,0,NULL);
 INSERT INTO `mob_groups` VALUES (9,5728,76,'Ashu_Talif_Crew_cor',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (10,1933,76,'Heraldic_Imp',0,128,0,0,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (11,933,76,'Deadpan_Devilet',0,128,0,0,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (12,963,76,'Dekka',0,128,602,0,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (11,933,76,'Deadpan_Devilet',0,128,0,39000,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (12,963,76,'Dekka',0,128,602,39200,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (13,1448,76,'Gakke',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (14,1017,76,'Devilet',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (15,3191,76,'Powderkeg_Yanadahn',0,128,2019,0,0,0,NULL);
