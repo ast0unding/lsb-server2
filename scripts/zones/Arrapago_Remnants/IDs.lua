@@ -133,20 +133,20 @@ zones[xi.zone.ARRAPAGO_REMNANTS] =
             {
                 [1] =
                 {
-                mobs_start = 17080516,
-                mobs_end   = 17080519,
+                    mobs_start = 17080516,
+                    mobs_end   = 17080519,
                 },
 
                 [2] =
                 {
-                mobs_start = 17080521,
-                mobs_end   = 17080522,
+                    mobs_start = 17080521,
+                    mobs_end   = 17080522,
                 },
 
                 [3] =
                 {
-                mobs_start = 17080526,
-                mobs_end   = 17080530,
+                    mobs_start = 17080526,
+                    mobs_end   = 17080530,
                 },
 
                 astrologer = 17080520,
@@ -162,20 +162,20 @@ zones[xi.zone.ARRAPAGO_REMNANTS] =
             {
                 [1] =
                 {
-                mobs_start = 17080538,
-                mobs_end   = 17080541,
+                    mobs_start = 17080538,
+                    mobs_end   = 17080541,
                 },
 
                 [2] =
                 {
-                mobs_start = 17080543,
-                mobs_end   = 17080544,
+                    mobs_start = 17080543,
+                    mobs_end   = 17080544,
                 },
 
                 [3] =
                 {
-                mobs_start = 17080549,
-                mobs_end   = 17080553,
+                    mobs_start = 17080549,
+                    mobs_end   = 17080553,
                 },
 
                 astrologer = 17080542,

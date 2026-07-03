@@ -151,7 +151,7 @@ instanceObject.onEventFinish = function(player, csid, option, npc)
                     end
 
                     for k, v in pairs(ID.mob[2][path]) do
-                        if k ~= "mobs_start" and k ~= "mobs_end" then
+                        if type(v) == "number" and k ~= "mobs_start" and k ~= "mobs_end" then
                             DespawnMob(v, instance)
                         end
                     end
@@ -169,9 +169,9 @@ instanceObject.onEventFinish = function(player, csid, option, npc)
             if
                 ID.mob[3] and
                 ID.mob[3][1] and
-                ID.mob[3][4]
+                ID.mob[3][3]
             then
-                for id = ID.mob[3][1].rampart1, ID.mob[3][4].gyroE do
+                for id = ID.mob[3][1].rampart1, ID.mob[3][3].gyroE do
                     DespawnMob(id, instance)
                 end
             end

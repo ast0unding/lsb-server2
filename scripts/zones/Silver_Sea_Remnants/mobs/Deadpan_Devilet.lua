@@ -13,18 +13,18 @@ end
 
 entity.onMobRoam = function(mob)
     if not mob:isFollowingPath() then
-        mob:setMod(xi.mod.MOVE_SPEED_STACKABLE, 60)
-        mob:pathThrough(ID.mob[2][2].roam_path, xi.pathflag.RUN, xi.pathflag.SCRIPT)
+        mob:setBaseSpeed(60)
+        mob:pathThrough(ID.mob[2][2].roam_path, bit.bor(xi.pathflag.RUN, xi.pathflag.SCRIPT))
     end
 end
 
-entity.onMobDeath = function(mob, player, isKiller)
+entity.onMobDeath = function(mob, player, optParams)
     local instance = mob:getInstance()
     if not instance then
         return
     end
 
-    if isKiller then
+    if optParams.isKiller then
         if
             ID.mob[2] and
             ID.mob[2][2] and

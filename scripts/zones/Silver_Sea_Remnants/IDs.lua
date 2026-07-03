@@ -12,7 +12,7 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
         ITEM_OBTAINED                 = 6394, -- Obtained: <item>.
         GIL_OBTAINED                  = 6395, -- Obtained <number> gil.
         KEYITEM_OBTAINED              = 6397, -- Obtained key item: <keyitem>.
-        KEYITEM_LOST                  = 6398, -- Lost key item: <keyitem>.        
+        KEYITEM_LOST                  = 6398, -- Lost key item: <keyitem>.
         CARRIED_OVER_POINTS           = 7005, -- You have carried over <number> login point[/s].
         LOGIN_CAMPAIGN_UNDERWAY       = 7006, -- The [/January/February/March/April/May/June/July/August/September/October/November/December] <number> Login Campaign is currently underway!
         LOGIN_NUMBER                  = 7007, -- In celebration of your most recent login (login no. <number>), we have provided you with <number> points! You currently have a total of <number> points.
@@ -53,7 +53,7 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
         },
         [2] = -- 2nd Floor
         {
-            [1] = -- NE Path
+            [1] = -- SW Path
             {
                 mobs_start = 17088574,
                 mobs_end   = 17088593,
@@ -81,6 +81,91 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
             {
                 mobs_start = 17088618,
                 mobs_end   = 17088637,
+            },
+        },
+        [3] = -- 3rd Floor
+        {
+            [1] = -- S Big Room
+            {
+                mobs_start = 17088654,
+                mobs_end   = 17088657,
+                rampart1   = 17088638,
+                rampart2   = 17088642,
+                rampart3   = 17088646,
+                rampart4   = 17088650,
+            },
+            [2] = -- N Big Room
+            {
+                mobs_start = 17088658,
+                mobs_end   = 17088666,
+                gyroN      = 17088667,
+                don        = 17088668,
+                gear_path  =
+                {
+                    -339, 0, -307,
+                    -352, 0, -288,
+                    -311, 0, -289,
+                    -316, 0, -324,
+                    -351, 0, -311,
+                    -374, 0, -299,
+                    -339, 0, -293,
+                    -303, 0, -300,
+                    -341, 0, -330,
+                },
+            },
+            [3] = -- E Big Room
+            {
+                mobs_start = 17088685,
+                mobs_end   = 17088692,
+                rampart1   = 17088669,
+                rampart2   = 17088673,
+                rampart3   = 17088677,
+                rampart4   = 17088681,
+                gyroE      = 17088717,
+            },
+            [4] = -- W Big Room
+            {
+                mobs_start = 17088709,
+                mobs_end   = 17088716,
+                rampart1   = 17088693,
+                rampart2   = 17088697,
+                rampart3   = 17088701,
+                rampart4   = 17088705,
+            },
+        },
+        [4] = -- 4th Floor
+        {
+            [1] =
+            {
+                mobs_start = 17088718,
+                mobs_end   = 17088726,
+                rampart1   = 17088727,
+                rampart2   = 17088731,
+                rampart3   = 17088735,
+                rampart4   = 17088739,
+            },
+            [2] =
+            {
+                mobs_start = 17088743,
+                mobs_end   = 17088750,
+            },
+            [3] =
+            {
+                mobs_start = 17088751,
+                mobs_end   = 17088767,
+                rampart1   = 17088768,
+                rampart2   = 17088772,
+                rampart3   = 17088776,
+                rampart4   = 17088780,
+                citramp    = 17088784,
+                chelo      = 17088785,
+            },
+        },
+        [5] = -- 5th Floor
+        {
+            [1] = -- Boss Room
+            {
+                chariot = GetFirstID('Long-Armed_Chariot'),
             },
         },
     },
@@ -117,8 +202,23 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
             {
                 DOOR1 = GetFirstID('_24k'), -- SE Door
                 DOOR2 = GetFirstID('_24f'), -- NW Door
-            }
-        }
+            },
+        },
+        [3] = -- 3rd Floor
+        {
+            [1] =
+            {
+                SLOT  = 17089353,
+                DOOR1 = GetFirstID('_24m'), -- W Door
+                DOOR2 = GetFirstID('_24p'), -- E Door
+                DOOR3 = GetFirstID('_24q'), -- SE Door
+                DOOR4 = GetFirstID('_24l'), -- SW Door
+                DOOR5 = GetFirstID('_24s'), -- N Door
+                DOOR6 = GetFirstID('_24r'), -- S Door
+                DOOR7 = GetFirstID('_24o'), -- NE Door
+                DOOR8 = GetFirstID('_24n'), -- NW Door
+            },
+        },
     },
     drops =
     {
@@ -200,6 +300,13 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
                 xi.item.MEDIOCRIS_CELL,
                 xi.item.HUMILUS_CELL,
                 xi.item.SPISSATUS_CELL,
+            },
+            DEADCELLS =
+            {
+                xi.item.HUMILUS_CELL,
+                xi.item.DUPLICATUS_CELL,
+                xi.item.OPACUS_CELL,
+                xi.item.INCUS_CELL
             },
         },
     },
