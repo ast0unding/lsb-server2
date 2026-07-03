@@ -1,31 +1,26 @@
 -----------------------------------
 -- Instance: Silver Sea Remnants
--- Mob: Dekka
+-- Mob: Haunt
 -----------------------------------
 local ID = zones[xi.zone.SILVER_SEA_REMNANTS]
 -----------------------------------
 ---@type TMobEntity
 local entity = {}
 
-entity.onMobSpawn = function(mob)
-    entity.onMobRoam(mob)
-end
-
-entity.onMobRoam = function(mob)
-    if not mob:isFollowingPath() then
-        mob:setBaseSpeed(60)
-        mob:pathThrough(ID.mob[2][2].roam_path, bit.bor(xi.pathflag.RUN, xi.pathflag.SCRIPT))
-    end
-end
-
 entity.onMobDeath = function(mob, player, optParams)
     local instance = mob:getInstance()
+
     if not instance then
         return
     end
 
     if optParams.isKiller then
-        -- salvageUtil.spawnTempChest(mob, {})
+        local stage = instance:getStage()
+
+        if stage == 3 then
+            local cell = ID.drops[3].CELLS[math.random(#ID.drops[3].CELLS)]
+            player:addTreasure(cell, mob)
+        end
     end
 end
 

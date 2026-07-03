@@ -7,10 +7,14 @@ local ID = zones[xi.zone.SILVER_SEA_REMNANTS]
 local entity = {}
 
 entity.onTrigger = function(player, npc)
-    if npc:getInstance():getProgress() == 0 then
+    local instance = npc:getInstance()
+
+    if instance:getLocalVar('floor3_choice') == 2 then
+        player:messageSpecial(ID.text.DOOR_IS_SEALED)
+    elseif instance:getLocalVar('door_E_open') >= 1 then
         player:startEvent(xi.salvage.csid.DOOR_OPEN)
     else
-        player:messageSpecial(ID.text.DOOR_IS_SEALED)
+        player:messageSpecial(ID.text.DOOR_IS_SEALED_MYSTERIOUS)
     end
 end
 
@@ -19,18 +23,20 @@ entity.onEventFinish = function(player, csid, option, door)
         door:setAnimation(xi.animation.OPEN_DOOR)
         local instance = door:getInstance()
 
-        if ID.mob[2] and ID.mob[2][2] and ID.mob[2][2].deadpan then
-            SpawnMob(ID.mob[2][2].deadpan, instance)
+        instance:setLocalVar('floor3_choice', 1)
+
+        for id = ID.mob[4][3].mobs_start, ID.mob[4][3].mobs_end do
+            SpawnMob(id, instance)
         end
 
-        if ID.npc[2] and ID.npc[2][1] and ID.npc[2][1].SOCKET then
-            local socket = GetNPCByID(ID.npc[2][1].SOCKET, instance)
-            if socket then
-                socket:setStatus(xi.status.NORMAL)
-            end
-        end
+        SpawnMob(ID.mob[4][3].rampart1, instance)
+        SpawnMob(ID.mob[4][3].rampart2, instance)
+        SpawnMob(ID.mob[4][3].rampart3, instance)
+        SpawnMob(ID.mob[4][3].rampart4, instance)
 
+        instance:setStage(4)
         instance:setProgress(2)
+
         door:setUntargetable(true)
     end
 end
