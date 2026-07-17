@@ -4362,7 +4362,14 @@ INSERT INTO `mob_skill_lists` VALUES ('FOMOR_HAND_TO_HAND',2100,251); -- aegis_s
 INSERT INTO `mob_skill_lists` VALUES ('FOMOR_HAND_TO_HAND',2100,252); -- dancing_chains
 INSERT INTO `mob_skill_lists` VALUES ('FOMOR_HAND_TO_HAND',2100,253); -- barbed_crescent
 
--- Next ID : 2101
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2101,1957); -- Frog Song
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2101,1958); -- Magic Hammer
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2101,1959); -- Water Bomb
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2101,1960); -- Frog Cheer
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2101,1961); -- Providence
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2101,1962); -- Frog Chorus
+
+-- Next ID : 2102
 -- ------------------------------------------------------------
 -- Start of Ambuscade section
 -- NOTE: The mobs are changed every update in the DATs, so using out-of-date

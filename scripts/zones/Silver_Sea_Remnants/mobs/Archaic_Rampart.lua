@@ -8,6 +8,15 @@ local ID = zones[xi.zone.SILVER_SEA_REMNANTS]
 ---@type TMobEntity
 local entity = {}
 
+local function isFloor3Rampart(mobID)
+    return mobID >= ID.mob[3][1].rampart1 and mobID <= ID.mob[3][4].rampart4
+end
+
+local function isFloor4Rampart(mobID)
+    return (mobID >= ID.mob[4][1].rampart1 and mobID <= ID.mob[4][1].rampart4) or
+        (mobID >= ID.mob[4][3].rampart1 and mobID <= ID.mob[4][3].rampart4)
+end
+
 entity.onMobSpawn = function(mob)
     local instance = mob:getInstance()
 
@@ -16,21 +25,22 @@ entity.onMobSpawn = function(mob)
     end
 
     local mobID = mob:getID()
-    local isFloor3 = (mobID >= ID.mob[3][1].rampart1 and mobID <= ID.mob[3][4].rampart4)
+    mob:setMobMod(xi.mobMod.ROAM_DISTANCE, 0)
 
-    if isFloor3 then
-        mob:setMobMod(xi.mobMod.ROAM_DISTANCE, 0)
+    if isFloor4Rampart(mobID) then
+        mob:setLocalVar('spawnCount', 3)
+    end
+
+    if mobID == ID.mob[4][3].citramp then
+        mob:setLocalVar('spawnCount', 1)
+        mob:setLocalVar('spawnLimit', 1)
+        mob:setLocalVar('timedSpawn', 70)
+    end
+
+    if isFloor3Rampart(mobID) then
         mob:setLocalVar('lastPetPop', os.time())
 
-        local isWestRampart = (mobID == ID.mob[3][3].rampart1 or
-                               mobID == ID.mob[3][3].rampart2 or
-                               mobID == ID.mob[3][3].rampart3 or
-                               mobID == ID.mob[3][3].rampart4)
-
-        if
-            instance:getLocalVar('GATE_E') == mobID or
-            isWestRampart
-        then
+        if instance:getLocalVar('GATE_E') == mobID then
             mob:setMobMod(xi.mobMod.NO_MOVE, 1)
         end
     end
@@ -44,9 +54,8 @@ entity.onMobRoam = function(mob)
     end
 
     local mobID = mob:getID()
-    local isFloor3 = (mobID >= ID.mob[3][1].rampart1 and mobID <= ID.mob[3][4].rampart4)
 
-    if isFloor3 then
+    if isFloor3Rampart(mobID) then
         local popTime = mob:getLocalVar('lastPetPop')
 
         local function isPetSpawned(petOffset)
@@ -93,9 +102,8 @@ entity.onMobFight = function(mob, target)
     end
 
     local mobID = mob:getID()
-    local isFloor3 = (mobID >= ID.mob[3][1].rampart1 and mobID <= ID.mob[3][4].rampart4)
 
-    if isFloor3 then
+    if isFloor3Rampart(mobID) then
         local popTime = mob:getLocalVar('lastPetPop')
 
         local function isPetSpawned(petOffset)
@@ -149,17 +157,45 @@ entity.onMobDeath = function(mob, player, optParams)
     end
 
     local mobID = mob:getID()
-    local isFloor3 = (mobID >= ID.mob[3][1].rampart1 and mobID <= ID.mob[3][4].rampart4)
 
-    if isFloor3 then
-        if instance:getLocalVar('GATE_E') == mobID then
-            instance:setLocalVar('door_E_open', 1)
+    if optParams.isKiller then
+        xi.salvage.spawnTempChest(mob, {})
+    end
+
+    if
+        isFloor3Rampart(mobID) and
+        instance:getLocalVar('GATE_E') == mobID
+    then
+        instance:setLocalVar('door_E_open', 1)
+    end
+
+    if
+        optParams.isKiller and
+        mobID >= ID.mob[4][3].rampart1 and
+        mobID <= ID.mob[4][3].rampart4
+    then
+        local kills = instance:getLocalVar('eastRampartKills') + 1
+        instance:setLocalVar('eastRampartKills', kills)
+
+        if kills == 4 then
+            SpawnMob(ID.mob[4][3].citramp, instance)
+        end
+    end
+
+    if
+        (isFloor3Rampart(mobID) or
+        isFloor4Rampart(mobID) or
+        mobID == ID.mob[4][3].citramp) and
+        optParams.isKiller
+    then
+        local numDrops = math.random(3, 5)
+        for i = 1, numDrops do
+            local cell = ID.drops[3].CELLS[math.random(#ID.drops[3].CELLS)]
+            player:addTreasure(cell, mob)
         end
 
-        if optParams.isKiller then
-            if math.random(5) == 1 then
-                player:addTreasure(xi.item.SILVER_SEA_CARD, mob)
-            end
+        if math.random(5) == 1 then
+            player:addTreasure(xi.item.SILVER_SEA_CARD, mob)
         end
     end
 end

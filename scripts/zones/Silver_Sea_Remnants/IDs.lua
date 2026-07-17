@@ -18,6 +18,7 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
         LOGIN_NUMBER                  = 7007, -- In celebration of your most recent login (login no. <number>), we have provided you with <number> points! You currently have a total of <number> points.
         MEMBERS_LEVELS_ARE_RESTRICTED = 7027, -- Your party is unable to participate because certain members' levels are restricted.
         TEMP_ITEM                     = 7065, -- Obtained temporary item: <item>!
+        HAVE_TEMP_ITEM                = 7253, -- You already have that temporary item.
         CELL_OFFSET                   = 7231, -- Main Weapon/Sub-Weapon restriction removed.
         SALVAGE_START                 = 7254, -- You feel an incredible pressure bearing down on you. This area appears to be blanketed in some sort of intense psionic field...
         TIME_TO_COMPLETE              = 7426, -- You have <number> [minute/minutes] (Earth time) to complete this mission.
@@ -60,16 +61,9 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
             },
             [2] = -- NW Path
             {
-                deadpan    = GetFirstID('Deadpan_Devilet'),
-                dekka      = GetFirstID('Dekka'),
-                gakke      = GetFirstID('Gakke'),
-                roam_path  =
-                {
-                    286, 0, 513,
-                    286, 0, 566,
-                    233, 0, 566,
-                    232, 0, 513,
-                },
+                deadpan = GetFirstID('Deadpan_Devilet'),
+                dekka   = GetFirstID('Dekka'),
+                gakke   = GetFirstID('Gakke'),
             },
             [3] = -- SE Path
             {
@@ -98,19 +92,40 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
             {
                 mobs_start = 17088658,
                 mobs_end   = 17088666,
-                gyroN      = 17088667,
-                don        = 17088668,
-                gear_path  =
+                gyroN      = GetFirstID('Gyroscopic_Gear'),
+                don        = GetFirstID('Don_Poroggo'),
+                deviletRoamArea =
                 {
-                    -339, 0, -307,
-                    -352, 0, -288,
-                    -311, 0, -289,
-                    -316, 0, -324,
-                    -351, 0, -311,
-                    -374, 0, -299,
-                    -339, 0, -293,
-                    -303, 0, -300,
-                    -341, 0, -330,
+                    xMin = -371,
+                    xMax = -313,
+                    zMin = -330,
+                    zMax = -270,
+                },
+                pillar =
+                {
+                    xMin = -348,
+                    xMax = -332,
+                    zMin = -308,
+                    zMax = -292,
+                },
+                gearPoints =
+                {
+                    { x = -366.5, y = 0.05, z = -326.5 }, -- 1
+                    { x = -366.5, y = 0.05, z = -300.0 }, -- 2
+                    { x = -366.5, y = 0.05, z = -273.5 }, -- 3
+                    { x = -340.0, y = 0.05, z = -273.5 }, -- 4
+                    { x = -313.5, y = 0.05, z = -273.5 }, -- 5
+                    { x = -313.5, y = 0.05, z = -300.0 }, -- 6
+                    { x = -313.5, y = 0.05, z = -326.5 }, -- 7
+                    { x = -340.0, y = 0.05, z = -326.5 }, -- 8
+                    { x = -340.0, y = 0.05, z = -306.5 }, -- 9
+                    { x = -346.5, y = 0.05, z = -306.5 }, -- 10
+                    { x = -346.5, y = 0.05, z = -300.0 }, -- 11
+                    { x = -346.5, y = 0.05, z = -293.5 }, -- 12
+                    { x = -340.0, y = 0.05, z = -293.5 }, -- 13
+                    { x = -333.5, y = 0.05, z = -293.5 }, -- 14
+                    { x = -333.5, y = 0.05, z = -300.0 }, -- 15
+                    { x = -333.5, y = 0.05, z = -306.5 }, -- 16
                 },
             },
             [3] = -- E Big Room
@@ -121,7 +136,7 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
                 rampart2   = 17088673,
                 rampart3   = 17088677,
                 rampart4   = 17088681,
-                gyroE      = 17088717,
+                gyroE      = GetFirstID('Gyroscopic_Gears'),
             },
             [4] = -- W Big Room
             {
@@ -135,7 +150,7 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
         },
         [4] = -- 4th Floor
         {
-            [1] =
+            [1] = -- West Path
             {
                 mobs_start = 17088718,
                 mobs_end   = 17088726,
@@ -149,7 +164,7 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
                 mobs_start = 17088743,
                 mobs_end   = 17088750,
             },
-            [3] =
+            [3] = -- E Path
             {
                 mobs_start = 17088751,
                 mobs_end   = 17088767,
@@ -158,7 +173,41 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
                 rampart3   = 17088776,
                 rampart4   = 17088780,
                 citramp    = 17088784,
-                chelo      = 17088785,
+                chelo      = GetFirstID('Citadel_Chelonian'),
+                gearPath   =
+                {
+                    { x = -300, y =  0, z = 210 },
+                    { x = -309, y =  0, z = 219 },
+                    { x = -299, y =  0, z = 228 },
+                    { x = -291, y =  0, z = 219 },
+                    { x = -259, y =  0, z = 220 },
+                    { x = -259, y =  0, z = 188 },
+                    { x = -269, y =  0, z = 180 },
+                    { x = -251, y =  0, z = 179 },
+                    { x = -259, y =  0, z = 188 },
+                    { x = -259, y =  0, z = 220 },
+                    { x = -291, y =  0, z = 219 },
+                    { x = -300, y =  0, z = 210 },
+                    { x = -300, y = -4, z = 149 },
+                    { x = -309, y = -4, z = 140 },
+                    { x = -299, y = -4, z = 131 },
+                    { x = -290, y = -4, z = 140 },
+                    { x = -259, y = -4, z = 139 },
+                    { x = -259, y = -4, z = 20 },
+                    { x = -220, y = -4, z = 20 },
+                    { x = -220, y = -4, z = -20 },
+                    { x = -291, y =  0, z = -20 },
+                    { x = -300, y =  0, z = -29 },
+                    { x = -308, y =  0, z = -20 },
+                    { x = -299, y =  0, z = -11 },
+                    { x = -291, y =  0, z = -20 },
+                    { x = -220, y = -4, z = -20 },
+                    { x = -220, y = -4, z = 20 },
+                    { x = -259, y = -4, z = 20 },
+                    { x = -259, y = -4, z = 139 },
+                    { x = -290, y = -4, z = 140 },
+                    { x = -300, y = -4, z = 149 },
+                },
             },
         },
         [5] = -- 5th Floor
@@ -175,18 +224,54 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
         {
             TEMP_ITEMS_BOX =
             {
-                -- Will do after base functionality of SSR is done as SSR isn't implemented at all.
+                17088810, 17088811, 17088812, 17088813, 17088814,
+                17088815, 17088816, 17088817, 17088818,
             },
             STATIC_ITEMS_BOX =
             {
-                -- Will do after base functionality of SSR is done as SSR isn't implemented at all.
-            }
+                17088787, 17088788, 17088789, 17088790,
+                17088791, 17088792, 17088793, 17088794,
+                17088795, 17088796, 17088797, 17088798,
+                17088799, 17088800, 17088801, 17088802,
+            },
+            -- Static boxes relocate here on the floor 2 transition (first 8)
+            secondFloorBoxPoints =
+            {
+                { x = 407.5, y = 3, z = 312.5, rot = 32 },  -- SE Path
+                { x = 432.5, y = 3, z = 312.5, rot = 96 },
+                { x = 432.5, y = 3, z = 287.5, rot = 160 },
+                { x = 407.5, y = 3, z = 287.5, rot = 224 },
+                { x = 247.5, y = 0, z = 527.5, rot = 224 }, -- NW Path
+                { x = 272.5, y = 0, z = 527.5, rot = 160 },
+                { x = 247.5, y = 0, z = 552.5, rot = 20 },
+                { x = 272.5, y = 0, z = 552.5, rot = 96 },
+            },
+            -- And here on the floor 4 E Path transition (all 16)
+            fourthFloorBoxPoints =
+            {
+                { x = -291, y =  0, z =  229, rot = 96 },
+                { x = -291, y =  0, z =  211, rot = 160 },
+                { x = -309, y =  0, z =  229, rot = 32 },
+                { x = -309, y =  0, z =  211, rot = 224 },
+                { x = -309, y = -4, z =  149, rot = 32 },
+                { x = -309, y = -4, z =  131, rot = 224 },
+                { x = -291, y = -4, z =  131, rot = 160 },
+                { x = -291, y = -4, z =  149, rot = 96 },
+                { x = -229, y = -4, z =   29, rot = 32 },
+                { x = -210, y = -4, z =   29, rot = 96 },
+                { x = -210, y = -4, z =   11, rot = 160 },
+                { x = -229, y = -4, z =   11, rot = 224 },
+                { x = -291, y =  0, z =  -29, rot = 160 },
+                { x = -309, y =  0, z =  -29, rot = 224 },
+                { x = -309, y =  0, z =  -11, rot = 32 },
+                { x = -291, y =  0, z =  -11, rot = 96 },
+            },
         },
         [1] = -- 1st Floor
         {
             [2] =
             {
-                ARMOURY_CRATE = GetFirstID('Armoury_Crate'),
+                ARMOURY_CRATE = 17088823,
                 DOOR1         = GetFirstID('_240'), -- Starting Door
                 DOOR2         = GetFirstID('_241'), -- W Door
                 DOOR3         = GetFirstID('_242'), -- E Door
@@ -217,6 +302,14 @@ zones[xi.zone.SILVER_SEA_REMNANTS] =
                 DOOR6 = GetFirstID('_24r'), -- S Door
                 DOOR7 = GetFirstID('_24o'), -- NE Door
                 DOOR8 = GetFirstID('_24n'), -- NW Door
+            },
+        },
+        [4] = -- 4th Floor
+        {
+            [1] =
+            {
+                DOOR1 = GetFirstID('_24t'), -- W Door
+                DOOR2 = GetFirstID('_24u'), -- E Door
             },
         },
     },

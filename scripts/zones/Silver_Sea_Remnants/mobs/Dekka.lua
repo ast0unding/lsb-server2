@@ -2,20 +2,11 @@
 -- Instance: Silver Sea Remnants
 -- Mob: Dekka
 -----------------------------------
-local ID = zones[xi.zone.SILVER_SEA_REMNANTS]
------------------------------------
 ---@type TMobEntity
 local entity = {}
 
 entity.onMobSpawn = function(mob)
-    entity.onMobRoam(mob)
-end
-
-entity.onMobRoam = function(mob)
-    if not mob:isFollowingPath() then
-        mob:setBaseSpeed(60)
-        mob:pathThrough(ID.mob[2][2].roam_path, bit.bor(xi.pathflag.RUN, xi.pathflag.SCRIPT))
-    end
+    mob:setMobMod(xi.mobMod.NO_MOVE, 1)
 end
 
 entity.onMobDeath = function(mob, player, optParams)
@@ -25,7 +16,7 @@ entity.onMobDeath = function(mob, player, optParams)
     end
 
     if optParams.isKiller then
-        -- salvageUtil.spawnTempChest(mob, {})
+        xi.salvage.spawnTempChest(mob, {})
     end
 end
 

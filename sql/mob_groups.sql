@@ -3978,7 +3978,7 @@ INSERT INTO `mob_groups` VALUES (20,6555,76,'Guard_Skeleton_blm',0,128,0,0,0,0,N
 INSERT INTO `mob_groups` VALUES (21,6533,76,'Doom_Mage',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (22,218,76,'Archaic_Gear',0,128,154,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (23,219,76,'Archaic_Gears',0,128,154,0,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (24,1862,76,'Gyroscopic_Gear',0,128,1262,0,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (24,1862,76,'Gyroscopic_Gear',0,128,1262,17233,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (25,1079,76,'Don_Poroggo',0,128,673,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (26,6556,76,'Guard_Skeleton_war',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (27,1863,76,'Gyroscopic_Gears',0,128,1263,0,0,0,NULL);
@@ -3987,7 +3987,7 @@ INSERT INTO `mob_groups` VALUES (29,2878,76,'Night_Eft',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (30,3456,76,'Sand_Lizard',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (31,962,76,'Deinonychus',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (32,732,76,'Citadel_Chelonian',0,128,474,0,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (33,2431,76,'Long-Armed_Chariot',0,128,1531,0,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (33,2431,76,'Long-Armed_Chariot',0,128,1531,53418,0,0,NULL);
 
 -- Silver Sea Remnants II
 -- TODO: capture levels from retail
