@@ -131,6 +131,16 @@ instanceObject.onEventFinish = function(player, csid, option, npc)
                 DespawnMob(id, instance)
             end
 
+            for i, pos in ipairs(ID.npc[0].secondFloorBoxPoints) do
+                local box = GetNPCByID(ID.npc[0].STATIC_ITEMS_BOX[i], instance)
+                if box then
+                    box:resetLocalVars()
+                    box:setAnimationSub(8)
+                    box:setPos(pos.x, pos.y, pos.z, pos.rot)
+                    box:setStatus(xi.status.NORMAL)
+                end
+            end
+
         elseif
             csid >= csidSsr.FLOOR_2_TO_3_NW and
             csid <= csidSsr.FLOOR_2_TO_3_NE

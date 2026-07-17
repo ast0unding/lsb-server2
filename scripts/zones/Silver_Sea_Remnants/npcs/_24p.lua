@@ -34,6 +34,17 @@ entity.onEventFinish = function(player, csid, option, door)
         SpawnMob(ID.mob[4][3].rampart3, instance)
         SpawnMob(ID.mob[4][3].rampart4, instance)
 
+        -- All sixteen static temp boxes relocate to the E Path small rooms
+        for i, pos in ipairs(ID.npc[0].fourthFloorBoxPoints) do
+            local box = GetNPCByID(ID.npc[0].STATIC_ITEMS_BOX[i], instance)
+            if box then
+                box:resetLocalVars()
+                box:setAnimationSub(8)
+                box:setPos(pos.x, pos.y, pos.z, pos.rot)
+                box:setStatus(xi.status.NORMAL)
+            end
+        end
+
         instance:setStage(4)
         instance:setProgress(2)
 

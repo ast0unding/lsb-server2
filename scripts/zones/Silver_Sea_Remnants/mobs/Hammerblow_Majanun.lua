@@ -10,11 +10,9 @@ entity.onMobSpawn = function(mob)
 end
 
 entity.onMobDeath = function(mob, player, optParams)
-    -- Uncomment this when salvage temp chest is ready
-    -- if optParams.isKiller then
-    --     local params = {}
-    --     xi.salvage.spawnTempChest(mob, params)
-    -- end
+    if optParams.isKiller then
+        xi.salvage.spawnTempChest(mob, {})
+    end
 end
 
 return entity

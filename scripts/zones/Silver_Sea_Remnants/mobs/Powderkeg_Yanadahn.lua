@@ -1,8 +1,6 @@
 -----------------------------------
 -- Instance: Silver Sea Remnants
--- Mob: Garm
------------------------------------
-local ID = zones[xi.zone.SILVER_SEA_REMNANTS]
+-- Mob: Powderkeg Yanadahn
 -----------------------------------
 ---@type TMobEntity
 local entity = {}
@@ -16,13 +14,6 @@ entity.onMobDeath = function(mob, player, optParams)
 
     if optParams.isKiller then
         xi.salvage.spawnTempChest(mob, {})
-
-        local stage = instance:getStage()
-
-        if stage == 3 then
-            local cell = ID.drops[3].CELLS[math.random(#ID.drops[3].CELLS)]
-            player:addTreasure(cell, mob)
-        end
     end
 end
 

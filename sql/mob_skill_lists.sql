@@ -4408,7 +4408,14 @@ INSERT INTO `mob_skill_lists` VALUES ('DynamisGoblin',2108,1093);
 INSERT INTO `mob_skill_lists` VALUES ('DynamisGoblin',2108,1095);
 INSERT INTO `mob_skill_lists` VALUES ('DynamisGoblin',2108,1097);
 
--- Next ID : 2109
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2200,1957); -- Frog Song
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2200,1958); -- Magic Hammer
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2200,1959); -- Water Bomb
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2200,1960); -- Frog Cheer
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2200,1961); -- Providence
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2200,1962); -- Frog Chorus
+
+-- Next ID : 2102
 -- ------------------------------------------------------------
 -- Start of Ambuscade section
 -- NOTE: The mobs are changed every update in the DATs, so using out-of-date

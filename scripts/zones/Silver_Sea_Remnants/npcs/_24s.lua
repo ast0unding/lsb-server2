@@ -9,7 +9,12 @@ local entity = {}
 entity.onTrigger = function(player, npc)
     local instance = npc:getInstance()
     if npc:getLocalVar('open') == 0 then
-        player:messageSpecial(ID.text.DOOR_IS_SEALED)
+        if instance:getLocalVar('door6_opened') == 1 then
+            player:messageSpecial(ID.text.DOOR_IS_SEALED)
+        else
+            player:messageSpecial(ID.text.DOOR_IS_SEALED_MYSTERIOUS)
+        end
+
     elseif instance:getLocalVar('door6_opened') == 1 then
         player:messageSpecial(ID.text.DOOR_IS_SEALED)
     elseif instance:getProgress() < 10 then
