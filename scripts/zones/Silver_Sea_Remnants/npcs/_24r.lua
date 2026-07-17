@@ -24,7 +24,7 @@ entity.onEventFinish = function(player, csid, option, door)
         local instance = door:getInstance()
         local GATEGUARD_E = { ID.mob[3][4].rampart1, ID.mob[3][4].rampart2, ID.mob[3][4].rampart3, ID.mob[3][4].rampart4 }
 
-        math.randomseed(os.time() + instance:getID())
+        math.randomseed(GetSystemTime() + instance:getID())
         math.random(); math.random(); math.random()
         instance:setLocalVar('GATE_E', GATEGUARD_E[math.random(#GATEGUARD_E)])
 

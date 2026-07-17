@@ -38,7 +38,7 @@ entity.onMobSpawn = function(mob)
     end
 
     if isFloor3Rampart(mobID) then
-        mob:setLocalVar('lastPetPop', os.time())
+        mob:setLocalVar('lastPetPop', GetSystemTime())
 
         if instance:getLocalVar('GATE_E') == mobID then
             mob:setMobMod(xi.mobMod.NO_MOVE, 1)
@@ -68,24 +68,24 @@ entity.onMobRoam = function(mob)
             return false
         end
 
-        if os.time() - popTime > 60 then
+        if GetSystemTime() - popTime > 60 then
             if not isPetSpawned(1) then
                 mob:useMobAbility(xi.mobSkill.REINFORCEMENTS)
-                mob:setLocalVar('lastPetPop', os.time())
+                mob:setLocalVar('lastPetPop', GetSystemTime())
                 mob:timer(2500, function(m)
                     SpawnMob(mobID + 1, instance)
                 end)
 
             elseif not isPetSpawned(2) then
                 mob:useMobAbility(xi.mobSkill.REINFORCEMENTS)
-                mob:setLocalVar('lastPetPop', os.time())
+                mob:setLocalVar('lastPetPop', GetSystemTime())
                 mob:timer(2500, function(m)
                     SpawnMob(mobID + 2, instance)
                 end)
 
             elseif not isPetSpawned(3) then
                 mob:useMobAbility(xi.mobSkill.REINFORCEMENTS)
-                mob:setLocalVar('lastPetPop', os.time())
+                mob:setLocalVar('lastPetPop', GetSystemTime())
                 mob:timer(2500, function(m)
                     SpawnMob(mobID + 3, instance)
                 end)
@@ -116,24 +116,24 @@ entity.onMobFight = function(mob, target)
             return false
         end
 
-        if os.time() - popTime > 15 then
+        if GetSystemTime() - popTime > 15 then
             if not isPetSpawned(1) then
                 mob:useMobAbility(xi.mobSkill.REINFORCEMENTS)
-                mob:setLocalVar('lastPetPop', os.time())
+                mob:setLocalVar('lastPetPop', GetSystemTime())
                 mob:timer(2500, function(m)
                     SpawnMob(mobID + 1, instance)
                 end)
 
             elseif not isPetSpawned(2) then
                 mob:useMobAbility(xi.mobSkill.REINFORCEMENTS)
-                mob:setLocalVar('lastPetPop', os.time())
+                mob:setLocalVar('lastPetPop', GetSystemTime())
                 mob:timer(2500, function(m)
                     SpawnMob(mobID + 2, instance)
                 end)
 
             elseif not isPetSpawned(3) then
                 mob:useMobAbility(xi.mobSkill.REINFORCEMENTS)
-                mob:setLocalVar('lastPetPop', os.time())
+                mob:setLocalVar('lastPetPop', GetSystemTime())
                 mob:timer(2500, function(m)
                     SpawnMob(mobID + 3, instance)
                 end)
