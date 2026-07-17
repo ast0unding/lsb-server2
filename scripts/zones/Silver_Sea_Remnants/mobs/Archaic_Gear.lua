@@ -263,7 +263,7 @@ entity.onMobSpawn = function(mob)
         mob:setLocalVar('conveyorPoint', best)
 
         if instance:getLocalVar('gearConveyorEpoch') == 0 then
-            instance:setLocalVar('gearConveyorEpoch', os.time())
+            instance:setLocalVar('gearConveyorEpoch', GetSystemTime())
         end
 
         local pt = conveyorPoints[best]
@@ -304,7 +304,7 @@ entity.onMobRoam = function(mob)
         return
     end
 
-    local cycle = math.floor((os.time() - epoch) / moveInterval)
+    local cycle = math.floor((GetSystemTime() - epoch) / moveInterval)
     if instance:getLocalVar('gearLastBeat') >= cycle then
         return
     end
