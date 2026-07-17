@@ -4369,6 +4369,13 @@ INSERT INTO `mob_skill_lists` VALUES ('Shadow_Lord',2101,671); -- umbra_smash
 INSERT INTO `mob_skill_lists` VALUES ('Shadow_Lord',2101,672); -- giga_slash
 INSERT INTO `mob_skill_lists` VALUES ('Shadow_Lord',2101,673); -- dark_nova
 
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2200,1957); -- Frog Song
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2200,1958); -- Magic Hammer
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2200,1959); -- Water Bomb
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2200,1960); -- Frog Cheer
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2200,1961); -- Providence
+INSERT INTO `mob_skill_lists` VALUES ('Don_Poroggo',2200,1962); -- Frog Chorus
+
 -- Next ID : 2102
 -- ------------------------------------------------------------
 -- Start of Ambuscade section

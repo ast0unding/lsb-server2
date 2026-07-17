@@ -41,6 +41,10 @@ local tempBoxItems =
     [33] = { itemID = xi.item.DUSTY_WING,                     amount = 1               },
 }
 
+-- Exposed for zones with boxes that roll from the standard pool themselves
+-- (e.g. Silver Sea Remnants' single-item static crates)
+xi.salvage.tempBoxItems = tempBoxItems
+
 xi.salvage.onTriggerCrate = function(player, npc)
     if npc:getLocalVar('open') == 0 then
         npc:setLocalVar('open', 1)

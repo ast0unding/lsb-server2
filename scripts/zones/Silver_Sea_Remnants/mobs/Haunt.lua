@@ -15,6 +15,8 @@ entity.onMobDeath = function(mob, player, optParams)
     end
 
     if optParams.isKiller then
+        xi.salvage.spawnTempChest(mob, {})
+
         local stage = instance:getStage()
 
         if stage == 3 then

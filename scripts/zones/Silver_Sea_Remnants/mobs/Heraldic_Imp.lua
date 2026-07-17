@@ -14,6 +14,8 @@ entity.onMobDeath = function(mob, player, optParams)
     end
 
     if optParams.isKiller then
+        xi.salvage.spawnTempChest(mob, {})
+
         local drops = ID.drops[3] and ID.drops[3].CELLS
         local mobId = mob:getID()
         local impIndex = (mobId % 4) + 1 -- 1 to 4

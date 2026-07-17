@@ -20,6 +20,9 @@ entity.onEventFinish = function(player, csid, option, door)
         door:setAnimation(xi.animation.OPEN_DOOR)
         local instance = door:getInstance()
 
+        -- Gear conveyor feeds and exits through the outer point by this (NE) door
+        instance:setLocalVar('gearGatePoint', 6)
+
         for id = ID.mob[3][2].mobs_start, ID.mob[3][2].mobs_end do
             SpawnMob(id, instance)
         end

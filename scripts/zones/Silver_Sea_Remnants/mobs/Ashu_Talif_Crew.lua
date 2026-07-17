@@ -96,7 +96,7 @@ entity.onMobDeath = function(mob, player, optParams)
             addRandomDrops(player, mob, cells, 3, 45)
         end
 
-        -- xi.salvage.spawnTempChest(mob, {})
+        xi.salvage.spawnTempChest(mob, {})
 
     -- Floor 1 - W Path
     elseif
@@ -118,12 +118,12 @@ entity.onMobDeath = function(mob, player, optParams)
             addRandomDrops(player, mob, cells, 3, 45)
         end
 
-        -- xi.salvage.spawnTempChest(mob, {})
+        xi.salvage.spawnTempChest(mob, {})
 
     -- Floor 1 Central Room
     elseif isCentralRoomMob(mobID) then
         addRandomDrops(player, mob, cells, 0, 45)
-        -- xi.salvage.spawnTempChest(mob, {})
+        xi.salvage.spawnTempChest(mob, {})
 
     -- Floor 2 NE Path
     elseif
@@ -131,7 +131,7 @@ entity.onMobDeath = function(mob, player, optParams)
         mobID <= ID.mob[2][1].mobs_end
     then
         addRandomDrops(player, mob, cells, 3, 45)
-        -- xi.salvage.spawnTempChest(mob, {})
+        xi.salvage.spawnTempChest(mob, {})
 
     -- Floor 2 SE Path
     elseif
@@ -151,7 +151,7 @@ entity.onMobDeath = function(mob, player, optParams)
         mobID <= ID.mob[2][4].mobs_end
     then
         addRandomDrops(player, mob, cells, 3, 45)
-        -- xi.salvage.spawnTempChest(mob, {})
+        xi.salvage.spawnTempChest(mob, {})
     end
 end
 

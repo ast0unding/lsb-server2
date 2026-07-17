@@ -4321,7 +4321,7 @@ INSERT INTO `mob_droplist` VALUES (473,4,0,1000,922,0);        -- Bat Wing (Desp
 -- ZoneID:  76 - Citadel Chelonian
 INSERT INTO `mob_droplist` VALUES (474,0,0,1000,5735,@ALWAYS);  -- Cotton Coin Purse (Always, 100%)
 INSERT INTO `mob_droplist` VALUES (474,0,0,1000,16101,@ALWAYS); -- Nemains Crown (Always, 100%)
-INSERT INTO `mob_droplist` VALUES (474,0,0,1000,14557,30);      -- Hikazu Hara-Ate (3.0%)
+INSERT INTO `mob_droplist` VALUES (474,0,0,1000,14557,70);      -- Hikazu Hara-Ate (7.0%)
 
 -- ZoneID:   7 - Citipati
 INSERT INTO `mob_droplist` VALUES (475,0,0,1000,15374,@UNCOMMON); -- Druids Slops (Uncommon, 10%)
@@ -10648,14 +10648,14 @@ INSERT INTO `mob_droplist` VALUES (1261,0,0,1000,1626,@VRARE); -- Bottle Of Avat
 
 -- ZoneID:  76 - Gyroscopic Gear
 INSERT INTO `mob_droplist` VALUES (1262,0,0,1000,14974,@ALWAYS);  -- Anus Gages (Always, 100%)
-INSERT INTO `mob_droplist` VALUES (1262,0,0,1000,5735,@UNCOMMON); -- Cotton Coin Purse (Uncommon, 10%)
+INSERT INTO `mob_droplist` VALUES (1262,0,0,1000,5735,500);       -- Cotton Coin Purse (50%)
 INSERT INTO `mob_droplist` VALUES (1262,0,0,1000,14968,70);       -- Freyas Gloves (7.0%)
 
 -- ZoneID:  76 - Gyroscopic Gears
 INSERT INTO `mob_droplist` VALUES (1263,0,0,1000,5735,@ALWAYS);  -- Cotton Coin Purse (Always, 100%)
 INSERT INTO `mob_droplist` VALUES (1263,0,0,1000,16085,@ALWAYS); -- Enyos Mask (Always, 100%)
 INSERT INTO `mob_droplist` VALUES (1263,0,0,1000,2488,740);      -- Piece Of Alexandrite (74.0%)
-INSERT INTO `mob_droplist` VALUES (1263,0,0,1000,15628,30);      -- Deimoss Cuisses (3.0%)
+INSERT INTO `mob_droplist` VALUES (1263,0,0,1000,15628,70);      -- Deimoss Cuisses (7.0%)
 
 -- ZoneID: 187 - Haa Pevi The Stentorian
 -- ZoneID: 187 - Loo Hepe The Eyepiercer
