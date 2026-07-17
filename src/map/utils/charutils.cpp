@@ -5028,7 +5028,7 @@ void DistributeExperiencePoints(CCharEntity* PChar, CMobEntity* PMob)
             }
 
             // Custom Era Code
-            if (PMob->m_Type & MOBTYPE_NOTORIOUS)
+            if ((PMob->m_Type & xi::MobType::Notorious) != xi::MobType::Normal)
             {
                 uint32 nmHuntCheck = charutils::GetCharVar(PMember, "NMHuntTarget");
 
