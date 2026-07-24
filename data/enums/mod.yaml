@@ -1270,6 +1270,9 @@ values:
   wsdmg_glory_slash:       809
   wsdmg_tartarus_torpor:   810
 
+  # ERA Custom
+  adds_spell: 1220
+
   # The spares take care of finding the next ID to use so long as we don't forget to list IDs that have been freed up by refactoring.
   # 570 through 825 used by WS DMG mods these are not spares.
   # SPARE IDs: 300 and 1212 and onward
