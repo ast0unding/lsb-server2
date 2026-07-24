@@ -38,6 +38,13 @@
 
 custom/commands/
 custom/lua/test_npcs_in_gm_home.lua
+wotg/sql/2007_exp_tables.sql
+
+# ------------------------------------
+# Era Custom
+# ------------------------------------
+
+# Lua files
 custom/lua/Fail_Badge_Quest.lua
 custom/lua/nmhunt.lua
 custom/lua/era_npc.lua
@@ -48,6 +55,8 @@ custom/lua/homepoint_crystal_exchange.lua
 custom/lua/elemental_grip_trade.lua
 custom/lua/chatoyant_staff_trade.lua
 custom/lua/era_custom_trades.lua
+
+# SQL files
 custom/sql/ffera_custom_npcs.sql
 custom/sql/era_mob_adjustments.sql
 custom/sql/mount_everywhere.sql
@@ -56,4 +65,63 @@ custom/sql/AH_adjustments.sql
 custom/sql/era_custom_drops.sql
 custom/sql/era_merits.sql
 custom/sql/era_custom_equipment.sql
-wotg/sql/2007_exp_tables.sql
+
+# ------------------------------------
+# Dynamis
+# ------------------------------------
+
+era/lua/globals/dynamis/dynamis.lua
+era/lua/globals/dynamis/spawning.lua
+# Statue recover-skill overrides
+era/lua/actions/mobskills/regain_hp.lua
+era/lua/actions/mobskills/regain_mp.lua
+# Dynamis zone hooks
+era/lua/zones/Dynamis-Bastok/Zone.lua
+era/lua/zones/Dynamis-Beaucedine/Zone.lua
+era/lua/zones/Dynamis-Buburimu/Zone.lua
+era/lua/zones/Dynamis-Jeuno/Zone.lua
+era/lua/zones/Dynamis-Qufim/Zone.lua
+era/lua/zones/Dynamis-San_dOria/Zone.lua
+era/lua/zones/Dynamis-Tavnazia/Zone.lua
+era/lua/zones/Dynamis-Valkurm/Zone.lua
+era/lua/zones/Dynamis-Windurst/Zone.lua
+era/lua/zones/Dynamis-Xarcabard/Zone.lua
+# Subjob unlock / time extension / win ??? NPCs
+era/lua/zones/Dynamis-Valkurm/npcs/qm0.lua
+era/lua/zones/Dynamis-Buburimu/npcs/qm0.lua
+era/lua/zones/Dynamis-Qufim/npcs/qm0.lua
+era/lua/zones/Dynamis-Tavnazia/npcs/qm0.lua
+era/lua/zones/Dynamis-Tavnazia/npcs/qm.lua
+# Entry NPCs
+era/lua/zones/Bastok_Mines/npcs/Trail_Markings.lua
+era/lua/zones/Beaucedine_Glacier/npcs/Trail_Markings.lua
+era/lua/zones/Buburimu_Peninsula/npcs/Hieroglyphics.lua
+era/lua/zones/Qufim_Island/npcs/Hieroglyphics.lua
+era/lua/zones/RuLude_Gardens/npcs/Trail_Markings.lua
+era/lua/zones/Southern_San_dOria/npcs/Trail_Markings.lua
+era/lua/zones/Tavnazian_Safehold/npcs/Hieroglyphics.lua
+era/lua/zones/Valkurm_Dunes/npcs/Hieroglyphics.lua
+era/lua/zones/Windurst_Walls/npcs/Trail_Markings.lua
+era/lua/zones/Xarcabard/npcs/Trail_Markings.lua
+# Hourglass & currency vendors
+era/lua/zones/Davoi/npcs/Lootblox.lua
+era/lua/zones/Castle_Oztroja/npcs/Antiqix.lua
+era/lua/zones/Beadeaux/npcs/Haggleblix.lua
+# GM commands
+era/lua/commands/dynaspawn.lua
+era/lua/commands/dynaspawnnm.lua
+era/lua/commands/dynaspawnmegaboss.lua
+era/lua/commands/dynadespawnall.lua
+era/lua/commands/dynasetwave.lua
+era/lua/commands/adddynatime.lua
+era/lua/commands/dynagranttitle.lua
+era/lua/commands/getdynainstance.lua
+era/lua/commands/getdynavar.lua
+era/lua/commands/resetdynainstance.lua
+era/lua/commands/resetdynaplayer.lua
+era/lua/commands/restoredyna.lua
+# Hourglass item handling + instance persistence (needs CMake reconfigure)
+era/cpp/dynamis_functions.cpp
+# Database: instance tables, droplists, spell/skill lists, mob groups
+era/sql/dynamis_instances.sql
+era/sql/dynamis.sql

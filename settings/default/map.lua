@@ -105,7 +105,7 @@ xi.settings.map =
     DISABLE_GEAR_SCALING = false,
 
     -- Disables Treasure Hunter procs (Era behavior wants this true)
-    DISABLE_TREASURE_HUNTER_PROCS = false,
+    DISABLE_TREASURE_HUNTER_PROCS = true,
 
     -- Enable auto attack damage calculations in Lua
     ENABLE_AUTO_ATTACK_LUA = false,
