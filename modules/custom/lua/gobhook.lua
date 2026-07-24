@@ -162,7 +162,7 @@ xi.mafia.CONTRACTS =
     [152] = { mobId = zones[xi.zone.CASTLE_ZVAHL_BAILEYS].mob.MARQUIS_AMON, mobName = 'Marquis Amon', item = xi.item.LION_CROSSBOW, itemName = 'Lion Crossbow', reward = 300, bonus = 100 },
     [153] = { mobId = zones[xi.zone.SEA_SERPENT_GROTTO].mob.MASAN, mobName = 'Masan', item = xi.item.PIGEONS_BLOOD_RUBY, itemName = 'Pigeon\'s Blood Ruby', reward = 500, bonus = 100 },
     [154] = { mobId = zones[xi.zone.CASTLE_OZTROJA].mob.MEE_DEGGI_THE_PUNISHER, mobName = 'Mee Deggii the Punisher', item = xi.item.OCHIUDOS_KOTE, itemName = 'Ochiudo\'s Kote', reward = 500, bonus = 800 },
-    [155] = { mobId = zones[xi.zone.JUGNER_FOREST].mob.METEORMAULER_ZHAGTEGG, mobName = 'Meteormauler Zhagtegg', item = xi.item.GARDE_PICK, itemName = 'Garde Pick', reward = 300, bonus = 100 },
+    [155] = { mobId = zones[xi.zone.JUGNER_FOREST].mob.METEORMAULER, mobName = 'Meteormauler Zhagtegg', item = xi.item.GARDE_PICK, itemName = 'Garde Pick', reward = 300, bonus = 100 },
     [156] = { mobId = zones[xi.zone.YUHTUNGA_JUNGLE].mob.TURTLERIDER, mobName = 'Meww the Turtlerider', item = xi.item.OLIPHANT, itemName = 'Oliphant', reward = 300, bonus = 100 },
     [157] = { mobId = zones[xi.zone.UPPER_DELKFUTTS_TOWER].mob.MIMAS, mobName = 'Mimas', item = xi.item.HUGE_MOTH_AXE, itemName = 'Huge Moth Axe', reward = 150, bonus = 100 },
     [158] = { mobId = zones[xi.zone.YUHTUNGA_JUNGLE].mob.MISCHIEVOUS_MICHOLAS, mobName = 'Mischievous Micholas', item = xi.item.KIDNEY_DAGGER, itemName = 'Kidney Dagger', reward = 500, bonus = 100 },

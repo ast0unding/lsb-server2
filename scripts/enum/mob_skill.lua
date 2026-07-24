@@ -1022,9 +1022,12 @@ xi.mobSkill =
 
     MIASMIC_BREATH_1              = 1604, -- Cirrate Christelle - Mobskill Version
     MIASMIC_BREATH_2              = 1605, -- Cirrate Christelle - Skill Attack version
-
+    FRAGRANT_BREATH_1             = 1606,
+    FRAGRANT_BREATH_2             = 1607,
     PUTRID_BREATH_1               = 1608, -- Cirrate Christelle - Mobskill Version
     PUTRID_BREATH_2               = 1609, -- Cirrate Christelle - Skill Attack version
+    EXTREMELY_BAD_BREATH_2        = 1610,
+    VAMPIRIC_LASH_2               = 1611,
 
     FROGKICK_2                    = 1621,
 
