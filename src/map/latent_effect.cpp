@@ -148,7 +148,7 @@ bool CLatentEffect::Activate()
                 item->addModifier(GetModValue(), GetModPower());
                 charutils::BuildingCharWeaponSkills(PChar);
                 PChar->pushPacket<GP_SERV_COMMAND_COMMAND_DATA>(PChar);
-                if (GetModValue() == Mod::ADDS_SPELL)
+                if (GetModValue() == xi::Mod::ADDS_SPELL)
                 {
                     PChar->pushPacket<GP_SERV_COMMAND_MAGIC_DATA>(PChar);
                 }
@@ -186,7 +186,7 @@ bool CLatentEffect::Deactivate()
                 CCharEntity* PChar = static_cast<CCharEntity*>(m_POwner);
                 charutils::BuildingCharWeaponSkills(PChar);
                 PChar->pushPacket<GP_SERV_COMMAND_COMMAND_DATA>(PChar);
-                if (GetModValue() == Mod::ADDS_SPELL)
+                if (GetModValue() == xi::Mod::ADDS_SPELL)
                 {
                     PChar->pushPacket<GP_SERV_COMMAND_MAGIC_DATA>(PChar);
                 }

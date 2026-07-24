@@ -1015,12 +1015,6 @@ auto CZone::ZoneServer(timer::time_point tick) -> Task<void>
         m_BattlefieldHandler->HandleBattlefields(tick);
     }
 
-    if (zoneTimerToken_.has_value() && m_stayAwakeCounter == 0 && m_zoneEntities->CharListEmpty() && m_timeZoneEmpty + 5s < timer::now() && CheckMobsPathedBack())
-    {
-        zoneTimerToken_.reset();
-        zoneTimerTriggerAreasToken_.reset();
-    }
-
     co_return;
 }
 

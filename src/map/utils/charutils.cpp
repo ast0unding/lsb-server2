@@ -4121,7 +4121,7 @@ int32 hasSpell(CCharEntity* PChar, uint16 SpellID)
     {
         if (auto* PItem = static_cast<CItemEquipment*>(PChar->getEquip(static_cast<SLOTTYPE>(i))))
         {
-            if (battleutils::GetScaledItemModifier(PChar, PItem, Mod::ADDS_SPELL) == SpellID)
+            if (battleutils::GetScaledItemModifier(PChar, PItem, xi::Mod::ADDS_SPELL) == SpellID)
             {
                 return 1;
             }

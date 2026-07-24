@@ -692,7 +692,7 @@ bool CanUseSpell(CBattleEntity* PCaster, CSpell* spell)
                 {
                     if (auto* PItem = static_cast<CItemEquipment*>(PChar->getEquip(static_cast<SLOTTYPE>(i))))
                     {
-                        if (battleutils::GetScaledItemModifier(PChar, PItem, Mod::ADDS_SPELL) == static_cast<uint16>(spell->getID()))
+                        if (battleutils::GetScaledItemModifier(PChar, PItem, xi::Mod::ADDS_SPELL) == static_cast<uint16>(spell->getID()))
                         {
                             return true;
                         }

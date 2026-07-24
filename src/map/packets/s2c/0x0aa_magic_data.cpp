@@ -1,4 +1,4 @@
-/*
+﻿/*
 ===========================================================================
 
   Copyright (c) 2025 LandSandBoat Dev Teams
@@ -37,7 +37,7 @@ GP_SERV_COMMAND_MAGIC_DATA::GP_SERV_COMMAND_MAGIC_DATA(const CCharEntity* PChar)
     {
         if (auto* PItem = static_cast<CItemEquipment*>(PChar->getEquip(static_cast<SLOTTYPE>(i))))
         {
-            auto spellId = static_cast<uint16>(PItem->getModifier(Mod::ADDS_SPELL));
+            auto spellId = static_cast<uint16>(PItem->getModifier(xi::Mod::ADDS_SPELL));
             if (spellId > 0 && spellId < 1024)
             {
                 spellList.set(spellId);
