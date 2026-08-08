@@ -4747,8 +4747,6 @@ void DistributeExperiencePoints(CCharEntity* PChar, CMobEntity* PMob)
                 charutils::AddPoints(PMember, "zeni_point", static_cast<uint32>(PMob->GetMLevel() - 40));
             }
 
-            bool chainactive = false;
-
             const int16 moblevel    = PMob->GetMLevel() + PMob->getMod(xi::Mod::EXP_LVL_MOD);
             const uint8 memberlevel = GetExpLevel(PMember);
 

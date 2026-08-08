@@ -324,7 +324,11 @@ xi.dynamis.handleDynamis = function(zone)
 
     -- Spawn any wave whose defeat requirements are now met.
     local zoneMobList = xi.dynamis.mobList and xi.dynamis.mobList[zoneID]
-    if zoneMobList then
+    if
+        zoneMobList and
+        #playersInZone > 0 and
+        zoneDynamisToken ~= 0
+    then
         for waveNumber, requirements in pairs(zoneMobList.waveDefeatRequirements) do
             if
                 waveNumber ~= 1 and

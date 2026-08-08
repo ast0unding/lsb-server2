@@ -14,6 +14,7 @@
 #include "map/enums/item_lockflg.h"
 #include "map/item_container.h"
 #include "map/items/item.h"
+#include "map/items/transactions/item_claim.h"
 #include "map/lua/lua_base_entity.h"
 #include "map/lua/luautils.h"
 #include "map/packets/s2c/0x01d_item_same.h"
@@ -70,7 +71,17 @@ namespace
         exdata.zone       = zoneID;
         exdata.token      = dynamisToken;
 
-        charutils::AddItem(PChar, LOC_INVENTORY, std::move(PItem));
+        auto transaction = ItemClaimTransaction::start(PChar);
+        if (!transaction)
+        {
+            ShowError("era_dynamis: unable to open item transaction for Perpetual Hourglass");
+            return;
+        }
+
+        if (!transaction->give(LOC_INVENTORY, std::move(PItem)).has_value() || !transaction->commit())
+        {
+            ShowError("era_dynamis: unable to give Perpetual Hourglass to player");
+        }
     }
 }; // namespace
 
