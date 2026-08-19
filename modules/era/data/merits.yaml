@@ -4,8 +4,8 @@
 
 merits:
   upgrade_costs:
-    hp_mp:            [1, 2, 3, 4, 5, 5, 5, 5]
-    attributes:       [3, 6, 9, 9, 9]
+    hp_mp:            [1, 2, 3, 4, 5, 5, 5, 5, 5, 7] # ERA Custom: 5, 7
+    attributes:       [3, 6, 9, 9, 9, 12, 12, 12, 12, 15] # ERA Custom: 12, 12, 12, 12, 15
     defensive_skills: [1, 2, 3, 3]
     others:           [1, 2, 3, 4]
     job_group_2:      [3, 4, 5]
@@ -15,13 +15,13 @@ merits:
       max_upgrades: 0
 
     hp_mp:
-      max_upgrades: 8
+      max_upgrades: 30
       merits:
-        max_merit: # Disable Max Merit
-          max_upgrades: 0
+        max_merit:
+          max_upgrades: 10
 
     attributes:
-      max_upgrades: 5
+      max_upgrades: 70
 
     combat_skills:
       max_upgrades: 20
