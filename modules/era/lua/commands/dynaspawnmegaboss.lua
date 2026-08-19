@@ -2,6 +2,8 @@
 -- func: dynaspawnmegaboss
 -- desc: Spawns the megaboss for the given dynamis zone.
 -----------------------------------
+require('modules/module_utils')
+-----------------------------------
 ---@type TCommand
 local commandObj = {}
 
@@ -45,4 +47,4 @@ commandObj.onTrigger = function(player, zoneName)
     player:printToPlayer(string.format('[dynaspawnmegaboss] Spawned megaboss index %d.', mobIndex))
 end
 
-return commandObj
+xi.module.registerCommand('dynaspawnmegaboss', commandObj)

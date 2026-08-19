@@ -2,6 +2,8 @@
 -- func: dynaspawn
 -- desc: Spawns a dynamis entity (statue or nightmare mob) by index.
 -----------------------------------
+require('modules/module_utils')
+-----------------------------------
 ---@type TCommand
 local commandObj = {}
 
@@ -30,4 +32,4 @@ commandObj.onTrigger = function(player, zoneName, mobIndex)
     player:printToPlayer(string.format('[dynaspawn] Spawned index %d.', mobIndex))
 end
 
-return commandObj
+xi.module.registerCommand('dynaspawn', commandObj)

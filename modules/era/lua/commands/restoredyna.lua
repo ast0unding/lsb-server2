@@ -2,6 +2,8 @@
 -- func: restoredyna
 -- desc: Restores the last recorded instance for the given dynamis zone.
 -----------------------------------
+require('modules/module_utils')
+-----------------------------------
 ---@type TCommand
 local commandObj = {}
 
@@ -28,4 +30,4 @@ commandObj.onTrigger = function(player, zoneName)
     player:printToPlayer(string.format('[restoredyna] Restored the last instance for %s.', zoneName))
 end
 
-return commandObj
+xi.module.registerCommand('restoredyna', commandObj)

@@ -2,6 +2,8 @@
 -- func: dynadespawnall
 -- desc: Despawns all mobs in the given dynamis instance.
 -----------------------------------
+require('modules/module_utils')
+-----------------------------------
 ---@type TCommand
 local commandObj = {}
 
@@ -25,4 +27,4 @@ commandObj.onTrigger = function(player, zoneName)
     player:printToPlayer(string.format('[dynadespawnall] Despawned all mobs in %s.', zone:getName()))
 end
 
-return commandObj
+xi.module.registerCommand('dynadespawnall', commandObj)

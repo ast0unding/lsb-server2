@@ -2,6 +2,8 @@
 -- func: resetdynaplayer
 -- desc: Clears a player's dynamis re-entry lockout. Defaults to the cursor target.
 -----------------------------------
+require('modules/module_utils')
+-----------------------------------
 ---@type TCommand
 local commandObj = {}
 
@@ -25,4 +27,4 @@ commandObj.onTrigger = function(player, playerName)
     player:printToPlayer(string.format("[resetdynaplayer] Cleared the re-entry lockout for '%s'.", targ:getName()))
 end
 
-return commandObj
+xi.module.registerCommand('resetdynaplayer', commandObj)

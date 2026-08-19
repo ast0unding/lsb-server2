@@ -2,6 +2,8 @@
 -- func: resetdynainstance
 -- desc: Ejects players and tears down the given dynamis instance.
 -----------------------------------
+require('modules/module_utils')
+-----------------------------------
 ---@type TCommand
 local commandObj = {}
 
@@ -32,4 +34,4 @@ commandObj.onTrigger = function(player, zoneName)
     player:printToPlayer(string.format('[resetdynainstance] Reset instance %d for %s.', instanceID, zoneName))
 end
 
-return commandObj
+xi.module.registerCommand('resetdynainstance', commandObj)

@@ -2,6 +2,8 @@
 -- func: getdynainstance
 -- desc: Reports the active instance id for the given dynamis zone.
 -----------------------------------
+require('modules/module_utils')
+-----------------------------------
 ---@type TCommand
 local commandObj = {}
 
@@ -28,4 +30,4 @@ commandObj.onTrigger = function(player, zoneName)
     end
 end
 
-return commandObj
+xi.module.registerCommand('getdynainstance', commandObj)

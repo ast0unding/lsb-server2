@@ -2,6 +2,8 @@
 -- func: adddynatime
 -- desc: Adds an amount of time to the given active dynamis instance.
 -----------------------------------
+require('modules/module_utils')
+-----------------------------------
 ---@type TCommand
 local commandObj = {}
 
@@ -36,4 +38,4 @@ commandObj.onTrigger = function(player, zoneName, minutes)
     player:printToPlayer(string.format('[adddynatime] Added %d minutes to %s.', minutes, zoneName))
 end
 
-return commandObj
+xi.module.registerCommand('adddynatime', commandObj)

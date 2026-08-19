@@ -2,6 +2,8 @@
 -- func: dynaspawnnm
 -- desc: Spawns a dynamis NM by index.
 -----------------------------------
+require('modules/module_utils')
+-----------------------------------
 ---@type TCommand
 local commandObj = {}
 
@@ -30,4 +32,4 @@ commandObj.onTrigger = function(player, zoneName, mobIndex)
     player:printToPlayer(string.format('[dynaspawnnm] Spawned NM index %d.', mobIndex))
 end
 
-return commandObj
+xi.module.registerCommand('dynaspawnnm', commandObj)

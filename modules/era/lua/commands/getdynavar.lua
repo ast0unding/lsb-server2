@@ -2,6 +2,8 @@
 -- func: getdynavar
 -- desc: Retrieves the current value of a dynamis instance variable.
 -----------------------------------
+require('modules/module_utils')
+-----------------------------------
 ---@type TCommand
 local commandObj = {}
 
@@ -58,4 +60,4 @@ commandObj.onTrigger = function(player, zoneName, varName)
     player:printToPlayer(string.format('[getdynavar] %s: %s', string.lower(varName), tostring(getter(zoneID))))
 end
 
-return commandObj
+xi.module.registerCommand('getdynavar', commandObj)

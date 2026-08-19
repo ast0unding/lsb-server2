@@ -2,6 +2,8 @@
 -- func: dynagranttitle
 -- desc: Grants the zone's win title to everyone in the given dynamis instance.
 -----------------------------------
+require('modules/module_utils')
+-----------------------------------
 ---@type TCommand
 local commandObj = {}
 
@@ -32,4 +34,4 @@ commandObj.onTrigger = function(player, zoneName)
     player:printToPlayer(string.format('[dynagranttitle] Granted title to %d player(s) in %s.', count, zone:getName()))
 end
 
-return commandObj
+xi.module.registerCommand('dynagranttitle', commandObj)

@@ -2,6 +2,8 @@
 -- func: dynasetwave
 -- desc: Despawns the current mobs and spawns the given wave for a dynamis zone.
 -----------------------------------
+require('modules/module_utils')
+-----------------------------------
 ---@type TCommand
 local commandObj = {}
 
@@ -39,4 +41,4 @@ commandObj.onTrigger = function(player, zoneName, wave)
     player:printToPlayer(string.format('[dynasetwave] Spawned wave %d in %s.', wave, zone:getName()))
 end
 
-return commandObj
+xi.module.registerCommand('dynasetwave', commandObj)
